@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Input Value Counter Sample</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:outputLabel value="Basic" /><br />
+        <p:inputText value="#{indexcontroller.inputValue}" /><br />
+        <p:commandButton update="ajaxUpdateText" value="Submit" action="#{indexcontroller.submitButtonAction()}" />
+        <br />
+        <p:outputLabel id="ajaxUpdateText" value="Input Value: #{indexcontroller.inputValue}" /><br />
+    </h:form>
+</h:body>
+</html>
